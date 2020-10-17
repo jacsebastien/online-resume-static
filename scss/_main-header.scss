@@ -1,0 +1,96 @@
+@import 'variables';
+@import 'helpers';
+
+.main-header {
+    @extend %box-shadow-3;
+
+    z-index: 888;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    bottom: 25px;
+
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: $color-revert;
+
+    img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .social-media {
+        margin-top: auto;
+        margin-bottom: 20px;
+
+        p {
+            font-size: 11px;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        ul {
+            display: flex;
+            width: 60%;
+            margin: auto;
+            justify-content: space-around;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            color: $color-primary-variant;
+            font-size: 16px;
+
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+    }
+}
+
+.main-menu {
+    text-align: right;
+    padding: 0 18px;
+
+    li {
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        font-weight: 500;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    a:hover:not(.active) {
+        color: $color-secondary;
+    }
+
+    .active {
+        color: $color-revert;
+        position: relative;
+
+        span {
+            position: relative;
+            z-index: 1;
+        }
+
+        &::before {
+            content: ' ';
+            position: absolute;
+            top: -8px;
+            bottom: -8px;
+            left: -15px;
+            right: -15px;
+
+            border-radius: 20px;
+            background-color: $color-secondary;
+        }
+    }
+}
