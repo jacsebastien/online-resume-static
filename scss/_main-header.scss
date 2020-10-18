@@ -6,15 +6,17 @@
 
     z-index: 888;
     position: fixed;
-    top: 25px;
-    left: 25px;
-    bottom: 25px;
+    top: 0;
+    left: 0;
+    bottom: 0;
 
     width: 270px;
-    display: flex;
     flex-direction: column;
 
+    display: none;
+
     background-color: $color-revert;
+
 
     img {
         width: 100%;
@@ -92,5 +94,15 @@
             border-radius: 20px;
             background-color: $color-secondary;
         }
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .main-header {
+        display: flex;
+
+        top: 25px;
+        left: 25px;
+        bottom: 25px;
     }
 }

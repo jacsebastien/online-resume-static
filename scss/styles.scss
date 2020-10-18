@@ -17,12 +17,20 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 0;
     line-height: 1.1;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Roboto Condensed';
     font-weight: 300;
 }
@@ -61,11 +69,38 @@ a {
     list-style: none;
 }
 
-.main-content {
-    &>section {
+.main-content>section {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 20px;
+}
+
+button.open-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+
+    @extend %box-shadow-2;
+    @extend %basic-transition;
+    
+    padding: 20px;
+    border: 0;
+    border-radius: 40px;
+    background-color: $color-secondary;
+
+    color: $color-revert;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 990px) {
+    .main-content>section {
         height: 100vh;
-        overflow: hidden;
         padding: 60px 0 60px 320px;
-        position: relative;
+    }
+
+    button.open-menu {
+        display: none;
     }
 }
