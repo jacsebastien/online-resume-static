@@ -14,13 +14,21 @@
 @media screen and (min-width: 990px) {
     .resume-view {
         display: grid;
-        grid-template-columns: repeat(3, 30%);
+        grid-template-columns: repeat(6, 15%);
         grid-template-rows: 20px auto;
         column-gap: 18px;
         row-gap: 18px;
 
         header {
-            grid-column: 1 / span 3;
+            grid-column: 1 / span 6;
+        }
+        
+        article {
+            grid-column: span 2;
+        }
+
+        .work-experience, .education {
+            grid-column: span 3;
         }
     }
 }
