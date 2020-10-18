@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="main-header">
+    <header id="mainHeader" class="main-header">
         <img alt="Profile photo" width="270" height="270" src="/assets/img/profile.jpg" />
         <nav class="main-menu">
             <ul class="menu-list">
@@ -50,7 +50,7 @@
             </ul>
         </nav>
     </header>
-    <button class="open-menu"><i class="fas fa-bars"></i></button>
+    <button class="open-menu" onclick="onOpenMainHeader()"><i class="fas fa-bars"></i></button>
     <div class="main-content">
         <section id="home" class="home-view">
             <div class="background-image"></div>
@@ -93,6 +93,17 @@
             <!-- Hobbies -->
         </section>
     </div>
+
+    <script>
+        function onOpenMainHeader() {
+            const classList = document.querySelector('#mainHeader').classList;
+            if(!classList.contains('open')) {
+                classList.add('open');
+            } else {
+                classList.remove('open');
+            }
+        }
+    </script>
 </body>
 
 </html>

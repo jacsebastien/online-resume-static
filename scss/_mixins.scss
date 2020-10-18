@@ -9,3 +9,8 @@
     -webkit-transition: $element $time $type;
     -moz-transition: $element $time $type;
 }
+
+@mixin transform($value) {
+    transform: translateX($value);
+    -webkit-transform: translateX($value);
+}

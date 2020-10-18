@@ -3,6 +3,7 @@
 
 .main-header {
     @extend %box-shadow-3;
+    @extend %basic-transition;
 
     z-index: 888;
     position: fixed;
@@ -13,10 +14,14 @@
     width: 270px;
     flex-direction: column;
 
-    display: none;
+    display: flex;
+    @include transform(-100%);
 
     background-color: $color-revert;
 
+    &.open {
+        @include transform(0);
+    }
 
     img {
         width: 100%;
@@ -99,10 +104,10 @@
 
 @media screen and (min-width: 990px) {
     .main-header {
-        display: flex;
-
         top: 25px;
         left: 25px;
         bottom: 25px;
+
+        @include transform(0);
     }
 }

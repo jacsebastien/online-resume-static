@@ -92,12 +92,16 @@ button.open-menu {
 
     color: $color-revert;
     font-size: 16px;
+
+    &.hidden {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 990px) {
     .main-content>section {
         height: 100vh;
-        padding: 60px 0 60px 320px;
+        padding: 40px 0 60px 320px;
     }
 
     button.open-menu {
