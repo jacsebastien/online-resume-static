@@ -9,6 +9,49 @@
             text-align: center;
         }
     }
+
+    // article {
+    //     margin-bottom: 40px;
+    // }
+
+    .skill-list, .hobbies-list {
+        @extend %unformatted-list;
+    }
+
+    .skill-list{
+        li {
+            padding: 10px 0;
+        }
+        .label {
+            margin-bottom: 6px;
+        }
+    }
+
+    .progress {
+        background: $color-primary-variant;
+        height: 6px;
+    }
+
+    .percentage {
+        background: $color-secondary;
+        height: 100%;
+    }
+
+    .hobbies-list {
+        li {
+            display: inline-block;
+            padding: 16px;
+        }
+        
+        i {
+            vertical-align: middle;
+            color: $color-secondary;
+            font-size: 20px;
+            margin-right: 6px;
+        }
+    }
+
+
 }
 
 @media screen and (min-width: 990px) {
@@ -24,10 +67,15 @@
         }
         
         article {
+            // margin-bottom: 0;
             grid-column: span 2;
         }
 
-        .work-experience, .education {
+        .about-me {
+            grid-column: span 6;
+        }
+
+        .languages, .hobbies, .work-experience, .education {
             grid-column: span 3;
         }
     }

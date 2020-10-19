@@ -17,7 +17,7 @@
     display: flex;
     @include transform(-100%);
 
-    background-color: $color-revert;
+    background: $color-revert;
 
     &.open {
         @include transform(0);
@@ -59,6 +59,10 @@
             }
         }
     }
+
+    .menu-list {
+        @extend %unformatted-list;
+    }
 }
 
 .main-menu {
@@ -97,7 +101,7 @@
             right: -15px;
 
             border-radius: 20px;
-            background-color: $color-secondary;
+            background: $color-secondary;
         }
     }
 }
