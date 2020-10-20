@@ -9,7 +9,7 @@
 
 body {
     color: $color-primary;
-    font-size: 13px;
+    font-size: 16px;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-weight: 400;
     line-height: 1.6;
@@ -40,6 +40,7 @@ header h2 {
     display: inline-block;
     font-size: 20px;
     font-weight: 500;
+    text-transform: capitalize;
 
     &::before {
         content: '';
@@ -92,7 +93,7 @@ button.open-menu {
 
 @media screen and (min-width: 990px) {
     .main-content>section {
-        padding: 40px 40px 60px 320px;
+        padding: 60px 40px 60px 320px;
     }
 
     button.open-menu {

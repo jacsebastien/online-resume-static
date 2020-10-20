@@ -5,23 +5,34 @@
             padding: 18px 16px;
             border-radius: 30px;
             background: $color-secondary;
+            color: $color-revert;
             width: 53px;
             text-align: center;
         }
     }
 
-    // article {
-    //     margin-bottom: 40px;
-    // }
+    h4 {
+        font-weight: 400;
+    }
 
-    .skill-list, .hobbies-list {
+    article {
+        margin-bottom: 40px;
+    }
+
+    .skill-list,
+    .hobbies-list,
+    .timeline,
+    .timeline-item-detail {
         @extend %unformatted-list;
     }
 
-    .skill-list{
+    .skill-list {
+        max-width: 500px;
+
         li {
             padding: 10px 0;
         }
+
         .label {
             margin-bottom: 6px;
         }
@@ -42,7 +53,7 @@
             display: inline-block;
             padding: 16px;
         }
-        
+
         i {
             vertical-align: middle;
             color: $color-secondary;
@@ -51,23 +62,81 @@
         }
     }
 
+    .work-experience,
+    .education {
+        h3 {
+            margin-bottom: 0;
+        }
 
+        h4 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+
+            span {
+                border-left: 2px solid $color-secondary;
+                padding-left: 8px;
+                margin-left: 8px;
+                font-weight: 800;
+            }
+        }
+
+        h5 {
+            font-size: 14px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .timeline {
+            padding-left: 26px;
+            font-size: 12px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 20px 0 20px 30px;
+            border-left: 1px solid $color-primary-variant;
+
+            &:last-child {
+                // border-color: transparent;
+                padding-bottom: 0;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 26px;
+                left: -6px;
+                width: 6px;
+                height: 6px;
+
+                border: solid 2px $color-secondary;
+                border-radius: 6px;
+                background: #fff;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 990px) {
     .resume-view {
         display: grid;
-        grid-template-columns: repeat(6, 15%);
+        grid-template-columns: repeat(6, auto);
         grid-template-rows: 20px auto;
-        column-gap: 18px;
-        row-gap: 18px;
+        column-gap: 30px;
+        row-gap: 30px;
 
         header {
             grid-column: 1 / span 6;
         }
-        
+
         article {
-            // margin-bottom: 0;
+            margin-bottom: 0;
             grid-column: span 2;
         }
 
@@ -75,7 +144,10 @@
             grid-column: span 6;
         }
 
-        .languages, .hobbies, .work-experience, .education {
+        .languages,
+        .hobbies,
+        .work-experience,
+        .education {
             grid-column: span 3;
         }
     }
