@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sebastien Jacques online resume</title>
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
 </head>
 
 <body>
@@ -16,16 +16,16 @@
         <nav class="main-menu">
             <ul class="menu-list">
                 <li>
-                    <a href="#home" class="active"><span>Home</span></a>
+                    <a href="index.html"><span>Home</span></a>
                 </li>
                 <li>
-                    <a href="#resume"><span>Resume</span></a>
+                    <a href="resume.html" class="active"><span>Resume</span></a>
                 </li>
                 <li>
-                    <a href="#works"><span>Works</span></a>
+                    <a href="works.html"><span>Works</span></a>
                 </li>
                 <li>
-                    <a href="#contact"><span>Contact</span></a>
+                    <a href="contact.html"><span>Contact</span></a>
                 </li>
             </ul>
         </nav>
@@ -52,22 +52,6 @@
     </header>
     <button class="open-menu" onclick="onOpenMainHeader()"><i class="fas fa-bars"></i></button>
     <div class="main-content">
-        <section id="home" class="home-view">
-            <div class="background-image"></div>
-            <div class="content">
-                <h1 class="home-title">Hi! I’m <span>Sébastien Jacques</span></h1>
-                <h2 class="home-subtitle">Front-end developer &amp; 3D artist</h2>
-                <ul class="menu-list">
-                    <li>
-                        <a href="#resume">Go to my resume! <i class="fas fa-arrow-down"></i></a>
-                    </li>
-                    <li>
-                        <button>Download my CV <i class="fas fa-file-pdf"></i></button>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
         <section id="resume" class="resume-view">
             <header>
                 <h2>Resume</h2>
@@ -243,12 +227,6 @@
                     </li>
                 </ul>
             </article>
-        </section>
-
-        <section id="works" class="resume-view">
-            <header>
-                <h2>My works</h2>
-            </header>
         </section>
     </div>
 

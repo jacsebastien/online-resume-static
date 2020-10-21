@@ -15,8 +15,8 @@
         font-weight: 400;
     }
 
-    article {
-        margin-bottom: 40px;
+    article + article {
+        margin-top: 40px;
     }
 
     .skill-list,
@@ -136,8 +136,11 @@
         }
 
         article {
-            margin-bottom: 0;
             grid-column: span 2;
+            
+            & + article {
+                margin-top: 0;
+            }
         }
 
         .about-me {
