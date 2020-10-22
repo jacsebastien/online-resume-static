@@ -14,6 +14,12 @@
         margin-top: 40px;
     }
 
+    .about-me {
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     .skill-list,
     .hobbies-list,
     .timeline,
@@ -121,32 +127,17 @@
 @media screen and (min-width: 990px) {
     .resume-view {
         display: grid;
-        grid-template-columns: repeat(6, auto);
+        grid-template-columns: repeat(2, auto);
         grid-template-rows: 20px auto;
-        column-gap: 30px;
-        row-gap: 30px;
+        column-gap: 40px;
+        row-gap: 40px;
 
-        header {
-            grid-column: 1 / span 6;
+        header, .about-me {
+            grid-column: 1 / span 2;
         }
 
-        article {
-            grid-column: span 2;
-
-            &+article {
-                margin-top: 0;
-            }
-        }
-
-        .about-me {
-            grid-column: span 6;
-        }
-
-        .languages,
-        .hobbies,
-        .work-experience,
-        .education {
-            grid-column: span 3;
+        article+article {
+            margin-top: 0;
         }
     }
 }
