@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap');
+
 @import 'vendor/normalize/normalize';
 @import "vendor/fontawesome/fontawesome.scss";
 @import "vendor/fontawesome/regular.scss";
@@ -37,15 +39,26 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Roboto Condensed';
+    font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h4 {
     font-weight: 300;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
 }
 
 header h2 {
     position: relative;
     display: inline-block;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
     text-transform: capitalize;
 
     &::before {
@@ -58,12 +71,6 @@ header h2 {
         left: 0;
         opacity: 0.4;
     }
-}
-
-h3 {
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: capitalize;
 }
 
 a {
